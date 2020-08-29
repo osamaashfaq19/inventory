@@ -1,4 +1,14 @@
+  <style> 
+    .error{
+      color:red;
+      font-weight:500 !important;
+    }
 
+    .btn{
+      border-radius:0px !important;
+    }
+
+  </style>
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->

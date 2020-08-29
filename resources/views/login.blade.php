@@ -26,9 +26,18 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
+
+           <?php
+                      if(Session::has('error')){
+                    ?>
+                    <div class="alert alert-danger" role="alert">
+                        {{ session('error') }}
+                    </div>
+                      <?php } ?>
+
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="dashboard" id="login_form" method="post">
+      <form action="login" id="login_form" method="post">
         {{ @csrf_field() }}
         <div class="input-group mb-3">
           <input type="email" value='osama.ashfaq19@outlook.com' name='email'  class="form-control" placeholder="Email">
@@ -49,7 +58,7 @@
         <div class="row">
           <!-- /.col -->
           <div class="col-4">
-            <a href='dashboard' class="btn btn-primary btn-block">Sign In</a>
+            <button type='submit' class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
