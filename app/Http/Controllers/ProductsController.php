@@ -35,9 +35,11 @@ class ProductsController extends Controller
             'price'                     =>  $request->input('price'),
             'trade_price'               =>  $trade_price,
             't_o'                       =>  $t_o,
+            't_o_discount_amount'       =>  $calculation['t_o_discount_amount'],
             'trade_discount'            =>  $calculation['trade_discount_amount'],
             'trade_discount_percent'    =>  $request->input('trade_discount_percent'),
             'scheme_discount'           =>  $request->input('scheme_discount'),
+            'scheme_discount'           =>  $calculation['scheme_discount_amount'],
             'total_product_price'       =>  $calculation['total_product_price']
         );
 
@@ -81,9 +83,11 @@ class ProductsController extends Controller
             'price'                     =>  $request->input('price'),
             'trade_price'               =>  $trade_price,
             't_o'                       =>  $t_o,
+            't_o_discount_amount'       =>  $calculation['t_o_discount_amount'],
             'trade_discount'            =>  $calculation['trade_discount_amount'],
             'trade_discount_percent'    =>  $request->input('trade_discount_percent'),
             'scheme_discount'           =>  $request->input('scheme_discount'),
+            'scheme_discount'           =>  $calculation['scheme_discount_amount'],
             'total_product_price'       =>  $calculation['total_product_price']
         );
        
@@ -115,8 +119,9 @@ class ProductsController extends Controller
         
         $data['total_product_price'] = $trade_price - $trade_discount_amount - $scheme - $t_o_amount;  
         $data['trade_discount_amount'] = $trade_discount_amount;
-
-
+        $data['t_o_discount_amount'] =  $t_o_amount;
+        $data['scheme_discount_amount'] = $scheme;
+        
         return $data; 
        
     }

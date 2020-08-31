@@ -55,7 +55,7 @@ Route::get('/users/edit/{id}','UsersController@edit');
 Route::post('/users/update/{id}','UsersController@update');
 
 // book order
-Route::get('/orders','OrderControllers@orders');
+Route::get('/orders','OrderControllers@index');
 Route::get('/orders/add','OrderControllers@add');
 Route::post('/orders/save','OrderControllers@save');
 Route::get('/orders/delete/{id}','OrderControllers@delete');

@@ -8,6 +8,10 @@
       border-radius:0px !important;
     }
 
+    .badge{
+      font-size:100%;
+    }
+
   </style>
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
